@@ -15,6 +15,8 @@
  */
 package com.example.android.datafrominternet.utilities;
 
+import android.net.Uri;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -46,6 +48,11 @@ public class NetworkUtils {
      */
     public static URL buildUrl(String githubSearchQuery) {
         // TODO (1) Fill in this method to build the proper Github query URL
+        final String GITHUB_BASE_URL = "https://api.github.com/search/repositories";
+        final String PARAM_QUERY = "q";
+        final String PARAM_SORT = "sort";
+        Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon();
+
         return null;
     }
 
